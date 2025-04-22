@@ -10,7 +10,7 @@ interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {
 export function Header({ title, subtitle, className, ...props }: HeaderProps) {
   return (
     <div className={cn("flex flex-col space-y-1.5", className)} {...props}>
-      <h1 className="text-2xl font-bold leading-tight tracking-tight text-bradesco-darkGray">
+      <h1 className="text-3xl font-bold leading-tight tracking-tight bg-gradient-to-r from-bradesco-red to-bradesco-darkRed bg-clip-text text-transparent">
         {title}
       </h1>
       {subtitle && (

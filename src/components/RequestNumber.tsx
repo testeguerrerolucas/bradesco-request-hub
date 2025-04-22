@@ -10,13 +10,13 @@ export function RequestNumber({ number, className, ...props }: RequestNumberProp
   return (
     <div 
       className={cn(
-        "bg-bradesco-gray border border-bradesco-mediumGray/20 rounded-md px-4 py-2 text-bradesco-darkGray flex items-center justify-between",
+        "bg-gradient-to-r from-bradesco-red/10 to-bradesco-red/5 backdrop-blur-sm border border-bradesco-red/20 rounded-xl px-6 py-3 text-bradesco-darkGray flex items-center justify-between shadow-sm",
         className
       )} 
       {...props}
     >
-      <span className="text-sm font-semibold">Nº da Solicitação:</span>
-      <span className="text-lg font-bold">{number}</span>
+      <span className="text-sm font-semibold text-bradesco-mediumGray">Nº da Solicitação:</span>
+      <span className="text-xl font-bold text-bradesco-red">{number}</span>
     </div>
   );
 }

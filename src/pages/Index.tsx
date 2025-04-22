@@ -9,9 +9,9 @@ const Index = () => {
   const requestNumber = Math.floor(100000000 + Math.random() * 900000000).toString();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-bradesco-gray/30">
+    <div className="min-h-screen bg-gradient-to-br from-white via-white to-bradesco-gray/20">
       <div className="container max-w-4xl mx-auto py-8 px-4 sm:px-6 font-sans">
-        <div className="flex flex-col space-y-6">
+        <div className="flex flex-col space-y-8">
           {/* Header with Bradesco logo */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <div className="flex flex-col space-y-4">
@@ -26,7 +26,7 @@ const Index = () => {
           </div>
           
           {/* Card with form */}
-          <div className="bg-white rounded-lg shadow-md p-6 border border-bradesco-gray/50">
+          <div className="bg-white rounded-xl shadow-lg p-8 border border-bradesco-gray/20 hover:shadow-xl transition-shadow duration-300">
             <ServiceRequestForm />
           </div>
           
@@ -38,6 +38,6 @@ const Index = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Index;
