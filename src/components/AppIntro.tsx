@@ -5,10 +5,7 @@ export default function AppIntro() {
   return (
     <section className="flex flex-col justify-center items-start h-full min-h-[420px] px-3 py-8">
       <div className="flex flex-col items-start gap-6">
-        {/* Logo grande */}
-        <div className="w-full flex justify-center md:justify-start">
-          <BradescoLogo className="scale-[1.8] md:scale-[2.2] max-w-none drop-shadow-xl mb-2" />
-        </div>
+      
         {/* Texto chamativo */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug bg-gradient-to-r from-bradesco-red to-bradesco-darkRed bg-clip-text text-transparent mb-2 drop-shadow">
           Bradesco <span className="font-extrabold">Solicitação de Serviços</span>
