@@ -22,7 +22,7 @@ const Index = () => {
               <ServiceRequestForm />
             </div>
             <div className="text-center text-xs text-bradesco-mediumGray mt-8">
-              © {new Date().getFullYear()} Banco Bradesco S.A. - Todos os direitos reservados
+              © {new Date().getFullYear()} Banco Bradesco S.A. 
             </div>
           </div>
         </div>
