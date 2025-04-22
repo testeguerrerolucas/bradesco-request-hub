@@ -3,31 +3,12 @@ import { BradescoLogo } from "@/components/BradescoLogo";
 
 export default function AppIntro() {
   return (
-    <section className="flex flex-col justify-center items-start h-full min-h-[420px] px-3 py-8">
-      <div className="flex flex-col items-start gap-6">
-        {/* Logo grande */}
-        <div className="w-full flex justify-center md:justify-start">
-          <BradescoLogo className="scale-[1.8] md:scale-[2.2] max-w-none drop-shadow-xl mb-2" />
-        </div>
-        {/* Texto chamativo */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug bg-gradient-to-r from-bradesco-red to-bradesco-darkRed bg-clip-text text-transparent mb-2 drop-shadow">
-          Bradesco <span className="font-extrabold">Solicitação de Serviços</span>
-        </h2>
-        <p className="text-md md:text-lg text-bradesco-mediumGray max-w-lg font-normal">
-          Plataforma interna para requisição de serviços de maneira rápida, <span className="font-semibold text-bradesco-red">moderna</span> e eficiente.<br />
-          Preencha ao lado para que sua necessidade seja atendida com prioridade!
+    <section className="flex flex-col justify-center items-center h-full min-h-[420px] px-6 py-8 bg-bradesco-red">
+      <div className="flex flex-col items-center text-center space-y-6">
+        <BradescoLogo className="w-[300px] h-auto mb-4 text-white" />
+        <p className="text-lg text-white font-medium max-w-md">
+          Plataforma de solicitação de serviços internos do Banco Bradesco.
         </p>
-        <ul className="mt-2 space-y-1 text-sm text-bradesco-mediumGray/80">
-          <li>
-            <span className="text-bradesco-red font-semibold">•</span> Solicite serviços para qualquer departamento em poucos cliques.
-          </li>
-          <li>
-            <span className="text-bradesco-red font-semibold">•</span> Visualize o status e detalhes da sua solicitação em tempo real.
-          </li>
-          <li>
-            <span className="text-bradesco-red font-semibold">•</span> Design elegante, experiência sem burocracia.
-          </li>
-        </ul>
       </div>
     </section>
   );
