@@ -1,5 +1,6 @@
 
-import AppIntro from "@/components/AppIntro";
+import { BradescoLogo } from "@/components/BradescoLogo";
+import { Header } from "@/components/Header";
 import { RequestNumber } from "@/components/RequestNumber";
 import { ServiceRequestForm } from "@/components/ServiceRequestForm";
 
@@ -8,27 +9,35 @@ const Index = () => {
   const requestNumber = Math.floor(100000000 + Math.random() * 900000000).toString();
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-white to-bradesco-gray/20">
-      <div className="container mx-auto px-0 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 bg-white rounded-2xl shadow-xl overflow-hidden border border-bradesco-gray/30 max-w-[1024px] mx-auto">
-          {/* ESQUERDA: Apresentação */}
-          <div className="bg-gradient-to-br from-white via-white/95 to-bradesco-red/5 flex flex-col justify-center">
-            <AppIntro />
+    <div className="min-h-screen bg-gradient-to-br from-white via-white to-bradesco-gray/20">
+      <div className="container max-w-4xl mx-auto py-8 px-4 sm:px-6 font-sans">
+        <div className="flex flex-col space-y-8">
+          {/* Header with Bradesco logo */}
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div className="flex flex-col space-y-4">
+              <BradescoLogo />
+              <Header 
+                title="Solicitação de serviços" 
+                subtitle="Sistema interno de requisição de serviços"
+                className="flex-1"
+              />
+            </div>
+            <RequestNumber number={requestNumber} className="w-full md:w-auto" />
           </div>
-          {/* DIREITA: Formulário de solicitação */}
-          <div className="flex flex-col justify-center px-4 sm:px-8 py-8 bg-white relative">
-            <RequestNumber number={requestNumber} className="mb-7" />
-            <div className="max-w-md w-full mx-auto">
-              <ServiceRequestForm />
-            </div>
-            <div className="text-center text-xs text-bradesco-mediumGray mt-8">
-              © {new Date().getFullYear()} Banco Bradesco S.A. - Todos os direitos reservados
-            </div>
+          
+          {/* Card with form */}
+          <div className="bg-white rounded-xl shadow-lg p-8 border border-bradesco-gray/20 hover:shadow-xl transition-shadow duration-300">
+            <ServiceRequestForm />
+          </div>
+          
+          {/* Footer */}
+          <div className="text-center text-xs text-bradesco-mediumGray mt-4">
+            © {new Date().getFullYear()} Banco Bradesco S.A. - Todos os direitos reservados
           </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Index;
