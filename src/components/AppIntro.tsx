@@ -21,9 +21,7 @@ export default function AppIntro() {
           <li>
             <span className="text-bradesco-red font-semibold">•</span> Visualize o status e detalhes da sua solicitação em tempo real.
           </li>
-          <li>
-            <span className="text-bradesco-red font-semibold">•</span> Design elegante, experiência sem burocracia.
-          </li>
+    
         </ul>
       </div>
     </section>
