@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Open Sans', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -27,6 +30,14 @@ export default {
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
+				},
+				bradesco: {
+					red: '#CC092F',
+					lightRed: '#FF304F', 
+					darkRed: '#A00020',
+					gray: '#F0F0F0',
+					darkGray: '#555555',
+					mediumGray: '#8A898C'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
